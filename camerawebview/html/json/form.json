@@ -1,0 +1,321 @@
+var jsonForm = 
+
+[
+   [
+      {
+         "header":"Cliente"
+      },
+      {
+         "label":"Nombre",
+         "placeholder":"Nombre",
+         "type":"text",
+         "name":"nombre",
+         "value":"",
+         "maxlength":"15",
+         "filter":"",
+         "description":"",
+         "error":"",
+         "required":"true"
+      },
+      {
+         "label":"Apellido 1",
+         "placeholder":"Apellido 1",
+         "type":"text",
+         "name":"apellido1",
+         "value":"",
+         "maxlength":"15",
+         "filter":"",
+         "description":"",
+         "error":"",
+         "required":"true"
+      },
+      {
+         "label":"Apellido 2",
+         "placeholder":"Apellido 2",
+         "type":"text",
+         "name":"apellido2",
+         "value":"",
+         "maxlength":"",
+         "filter":"",
+         "description":"",
+         "error":"El segundo apellido no es válido",
+         "required":"false"
+      },
+      {
+         "label":"T. documento",
+         "type":"select",
+         "name":"tipoDocumento",
+         "value":"",
+         "maxlength":"",
+         "filter":"NIF|NIE|CIF",
+         "description":"",
+         "error":"",
+         "required":"false"
+      },
+      {
+         "label":"N. documento",
+         "type":"text",
+         "name":"numDocumento",
+         "value":"",
+         "placeholder":"Número de documento",
+         "maxlength":"15",
+         "filter":"^\\w{0,15}$",
+         "description":"",
+         "error":"El segundo apellido no es válido",
+         "required":"false"
+      },
+      {
+         "label":"Cumpleaños",
+         "type":"date",
+         "name":"edad",
+         "value":"",
+         "dateformat":"mm/dd/yyyy",
+         "maxlength":"",
+         "textalign":"left",
+         "filter":"",
+         "description":"",
+         "error":"",
+         "required":"false"
+      },
+      {
+         "label":"Hora",
+         "type":"time",
+         "name":"hora",
+         "value":"",
+         "maxlength":"5",
+         "filter":"",
+         "description":"",
+         "error":"",
+         "required":"false"
+      },
+      {
+         "label":"Sexo",
+         "type":"radio",
+         "name":"sexo",
+         "value":"Hombre",
+         "maxlength":"",
+         "filter":"Hombre|Mujer|N/A",
+         "description":"",
+         "error":"",
+         "required":"false"
+      }
+	],
+[
+  {
+	"header": "Stepper"
+  },
+  {
+	"label": "Valoración",
+	"type": "range",
+	"name": "rango",
+	"value": "5",
+	"max": "10",
+	"min": "0",
+	"step": "0.5",
+	"maxlength": "",
+	"filter": "",
+	"description": "De 1 a 10 puntos",
+	"error": "",
+	"required": "false"
+  },
+  {
+	"label": "",
+	"type": "range",
+	"name": "rango2",
+	"value": "3",
+	"max": "9999",
+	"min": "0",
+	"step": "1",
+	"maxlength": "",
+	"filter": "",
+	"description": "<br>Esto es una prueba con <u>salto de línea</u> y <b>negrita</b>",
+	"error": "",
+	"required": "false"
+  }
+],
+   [
+      {
+         "header":"Dirección"
+      },
+      {
+         "placeholder":"Calle",
+         "widthpercent":"60%",
+         "type":"text",
+         "name":"direccion[calle]"
+      },
+      {
+         "placeholder":"Núm",
+         "widthpercent":"20%",
+         "type":"number",
+         "name":"direccion[num]"
+      },
+      {
+         "placeholder":"Pta",
+         "widthpercent":"20%",
+         "type":"number",
+         "name":"direccion[pta]"
+      },
+      {
+         "placeholder":"C.Postal",
+         "widthpercent":"28%",
+         "type":"number",
+         "name":"direccion[cpostal]"
+      },
+      {
+         "placeholder":"Localidad",
+         "widthpercent":"72%",
+         "type":"text",
+         "name":"direccion[localidad]"
+      }
+   ],
+   [
+      {
+         "header":"Estado civil"
+      },
+      {
+         "label":"",
+         "type":"radio",
+         "name":"estadocivil",
+         "value":"Soltero",
+         "maxlength":"",
+         "filter":"Soltero|Casado|Divorciado|Viudo",
+         "description":"",
+         "error":"",
+         "required":"false"
+      }
+   ],
+   [
+      {
+         "header":"Contacto"
+      },
+      {
+         "label":"Email",
+         "type":"email",
+         "name":"email",
+         "value":"",
+         "maxlength":"100",
+         "filter":"^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$",
+         "description":"Email requerido si no se especifica teléfono",
+         "error":"El email no es válido",
+         "required":"false"
+      },
+      {
+         "label":"Tel&eacute;fono",
+         "type":"tel",
+         "name":"phone[]",
+         "value":"",
+         "maxlength":"",
+         "filter":"^\\d{9,15}$",
+         "description":"Puedes insertar N teléfonos",
+         "error":"Teléfono no válido (debe tener entre 9-15 dígitos)",
+         "required":"false"
+      }
+   ],
+   [
+      {
+         "header":"Móvil"
+      },
+      {
+         "label":"",
+         "type":"tel",
+         "name":"mobile[]",
+         "value":"",
+         "maxlength":"",
+         "filter":"^\\d{9,15}$",
+         "description":"",
+         "error":"Teléfono no válido (debe tener entre 9-15 dígitos)",
+         "required":"false"
+      }
+   ],
+   [
+      {
+         "header":"Intereses"
+      },
+      {
+         "label":"Seguro de coche",
+         "type":"checkbox",
+         "name":"int[coche]",
+         "maxlength":"",
+         "value":"true",
+         "checked":"false",
+         "filter":"",
+         "description":"",
+         "error":"",
+         "required":""
+      },
+      {
+         "label":"Seguro de hogar",
+         "type":"checkbox",
+         "name":"int[hogar]",
+         "maxlength":"",
+         "value":"true",
+         "checked":"false",
+         "filter":"",
+         "description":"",
+         "error":"",
+         "required":""
+      },
+      {
+         "label":"Seguro de salud",
+         "type":"checkbox",
+         "name":"int[salud]",
+         "maxlength":"",
+         "value":"true",
+         "checked":"false",
+         "filter":"",
+         "description":"",
+         "error":"",
+         "required":""
+      },
+      {
+         "label":"Otros seguros",
+         "type":"checkbox",
+         "name":"int[otros]",
+         "maxlength":"",
+         "value":"true",
+         "checked":"false",
+         "filter":"",
+         "description":"",
+         "error":"",
+         "required":""
+      }
+   ],
+   [
+      {
+         "header":"Comentarios"
+      },
+      {
+         "label":"",
+         "type":"textarea",
+         "name":"comentarios",
+         "placeholder":"Comentarios...",
+         "value":"",
+         "maxlength":"3",
+         "filter":"",
+         "description":"Recuerda: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec volutpat neque. Pellentesque ac ligula et ipsum vehicula varius. Curabitur ante massa, egestas vel ligula ut, pulvinar aliquet arcu. Morbi ac nisi dignissim, aliquam tellus vitae, semper ex. Etiam iaculis tortor pulvinar, dapibus purus auctor, laoreet augue. Duis molestie neque a ante ornare bibendum at non arcu. Suspendisse orci nulla, elementum eu justo nec, auctor mattis urna. Cras rhoncus mi ante, et elementum leo condimentum sed",
+         "error":"",
+         "required":"false"
+      }
+   ],
+   [
+      {
+         "label":"Soy mayor de edad",
+         "type":"checkbox",
+         "name":"confirm",
+         "maxlength":"",
+         "value":"1",
+         "checked":"false",
+         "filter":"",
+         "description":"",
+         "error":"",
+         "required":""
+      }
+   ],
+   [
+      {
+         "submit":"Guardar contacto"
+      }
+   ]
+]
+
+;
