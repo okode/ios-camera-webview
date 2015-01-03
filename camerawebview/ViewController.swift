@@ -1,5 +1,5 @@
 /**
- * Copyright 2014 Okode | www.okode.com
+ * Copyright 2015 Okode | www.okode.com
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
