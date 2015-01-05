@@ -11,5 +11,10 @@ Requirements
 Building
 --------
 
+    $ ./gradlew archive
+
+Developing
+----------
+
 Open the project `camerawebview.xcodeproj` with Xcode and play on a real device with iOS 8.+.
 

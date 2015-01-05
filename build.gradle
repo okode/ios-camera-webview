@@ -1,0 +1,23 @@
+buildscript {    
+    repositories {
+      maven {
+          url("http://openbakery.org/repository/")
+      }
+      jcenter()
+    }
+    dependencies {
+        classpath group: "org.openbakery", name: "xcodePlugin", version: "0.9.+"
+    }
+}
+    
+apply plugin: "xcode"
+
+xcodebuild {
+    target           = "camerawebview"
+    configuration    = "Release"
+    sdk              = "iphoneos"
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = "2.2.1"
+}
